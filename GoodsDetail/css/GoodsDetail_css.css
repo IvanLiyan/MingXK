@@ -1,0 +1,834 @@
+
+/*navatation*/
+.navigation{
+    width: 990px;
+    margin: 5px auto;
+    height: 30px;
+    font: 12px/30px "";
+    color: #999;
+    text-align: left;
+}
+    .navigation a{
+        float: left;
+        box-sizing: content-box;
+        height: 30px;
+        padding: 0 10px;
+        font: 12px/30px "";
+        color: #999;
+        text-align: left;
+    }
+        .navigation span{
+            float: left;
+        }
+
+/*goodsView*/
+.goodsView{
+    width: 990px;
+    height: 534px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+    .goodsView .goodsView_l{
+        width: 447px;
+        height: 533px;
+        float: left;
+        border-bottom: 1px #eee solid;
+    }
+        .goodsView .goodsView_l a.viewB{
+            width: 432px;
+            height: 432px;
+            display: block;
+            margin-bottom: 10px;
+            float: left;
+            border: 1px #eee solid;
+        }
+        .goodsView .goodsView_l>ul{
+            width: 435px;
+            height: 56px;
+            padding-top: 6px;
+            overflow: hidden;
+        }
+         .goodsView .goodsView_l li.viewS{
+             height: 46px;
+             padding-top: 9px;
+             float: left;
+             position: relative;
+             margin-right: 3px;
+             margin-left: 3px;
+         }
+         .goodsView .goodsView_l li.viewSclick{
+             background: url("../imgs/arrow.gif")no-repeat 18px 3px;
+         }
+            .goodsView .goodsView_l li.viewS a{
+                width: 47px;
+                height: 37px;
+                display: block;
+            }
+                .goodsView .goodsView_l li.viewS a>img{
+                    width: 47px;
+                    height: 37px;
+                    border:1px #eee solid;
+                }
+            .goodsView .goodsView_l li.viewSclick a img{
+                border:2px #ff5300 solid;
+            }
+
+    .goodsView .goodsView_l div.share{
+        width: 435px;
+        height: 46px;
+        margin-top: 16px;
+        margin-right: 20px;
+    }
+        .goodsView_l .share>ul{
+            overflow: hidden;
+        }
+            .goodsView_l .share>ul li{
+                font: 12px/20px "";
+                color: #999;
+                float: left;
+            }
+                .goodsView_l .share>ul li a{
+                    display: block;
+                    width: 25px;
+                    height: 20px;
+                    /*padding-left: 20px;*/
+                    /*padding-right: 5px;*/
+                }
+                .goodsView_l .share>ul li:nth-child(2){
+                    background: url("../imgs/share.png") no-repeat 0 -63px;
+                }.goodsView_l .share>ul li:nth-child(3){
+                    background: url("../imgs/share.png") no-repeat 0 -19px;
+                }.goodsView_l .share>ul li:nth-child(4){
+                    background: url("../imgs/share.png") no-repeat 0 3px;
+                }.goodsView_l .share>ul li:nth-child(5){
+                    background: url("../imgs/share.png") no-repeat 0 -40px;
+                }.goodsView_l .share>ul li:nth-child(6){
+                    background: url("../imgs/share.png") no-repeat 0 -103px;
+                }.goodsView_l .share>ul li:nth-child(7){
+                    background: url("../imgs/tencent.png") no-repeat 0 2px;
+                }
+
+        .goodsView .goodsView_r{
+            width: 543px;
+            float: left;
+            overflow: hidden;
+        }
+            .goodsView_r .viewHead{
+                width: 543px;
+                height: 30px;
+            }
+                .goodsView_r .viewHead h1{
+                    font:14px/30px "Arial";
+                    color:#111;
+                    float: left;
+                    font-weight: bold;
+                }
+                .goodsView_r .viewHead span{
+                    font: 12px/30px "";
+                    color: #999;
+                }
+                .goodsView_r .viewHead a{
+                    color: #f60;
+                }.goodsView_r .viewHead a:hover{
+                    text-decoration: underline;
+                 }
+            .goodsView_r .viewPrice{
+                width: 533px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: 1px #999 dotted;
+            }
+                .goodsView_r .viewPrice>ul li{
+                    color: #666666;
+                    height: 27px;
+                    text-align: left;
+                    font:12px/27px "Arial";
+                }
+                    .goodsView_r .viewPrice li span.proMoney{
+                        font:18px/27px "Arial";
+                        font-weight: bold;
+                        color: #dd0000;
+                    }
+                    .goodsView_r .viewPrice li span.proPrice{
+                        border-radius: 2px;
+                        padding: 2px 5px;
+                        color:#fff;
+                        background: #ff9090;
+
+                    }
+                .goodsView_r .viewPrice li.feel{
+                    line-height: 34px;
+                    font-size: 12px;
+                }
+                    .goodsView_r .viewPrice li.feel span{
+                        line-height: 34px;
+                    }
+            .goodsView_r .viewSize{
+                border-top: 1px;
+                width: 533px;
+                border-top: 1px #999 dotted;
+                margin-top: 5px;
+            }
+                .goodsView_r .viewSize .proMessage{
+                    height: 35px;
+                    width: 543px;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                }
+                    .goodsView .viewSize .proMessage p{
+                        width: 59px;
+                        height: 20px;
+                        padding: 0 5px;
+                        margin-right: 1px;
+                        background: #ff9090;
+                        line-height: 20px;
+                        color:#fff;
+                        float: left;
+                    }
+                        .goodsView .viewSize .proMessage span{
+                            float: left;
+                            width: 483px;
+                            height: 20px;
+                            line-height: 20px;
+                            color: #fe6464;
+                            padding-left: 5px;
+                            text-align: left;
+                            background:#ffe9e9;
+                        }
+                .goodsView_r .viewSize .viewSize_b{
+                    width: 543px;
+                    height: 129px;
+                    padding: 7px 2px;
+                    background: #f5f5f5;
+                    margin-top: 5px;
+                    position: relative;
+                }
+                .goodsView_r .cmhs{
+                    position: absolute;
+                    top: -4px;
+                    right: 4px;
+                }
+                    .goodsView_r .viewSize_b ul{
+                        width: 100%;
+                        height: 39px;
+                        margin: 0 3px;
+                        overflow: hidden;
+                    }
+                        .goodsView_r .viewSize_b ul li{
+                            float: left;
+                            height: 22px;
+                            padding: 0 5px;
+                            margin: 2px;
+                            background: #fff;
+                            border:1px #ccc solid;
+                            line-height: 22px;
+                            cursor: pointer;
+                        }
+                        .goodsView_r .viewSize_b ul li.activeLi{
+                            border: 2px #ff9900 solid;
+                            margin-left: 1px;
+                            margin-right: 1px;
+                        }
+                        .goodsView_r .viewSize_b ul li.activedLi{
+                            border: 2px #ff9900 solid;
+                            margin-left: 1px;
+                            margin-right: 1px;
+
+                        }
+                        .goodsView_r .viewSize_b ul li.firstLi{
+                            width: 70px;
+                            background: none;
+                            text-align: right;
+                            border:none;
+                            /*line-height: 34px;*/
+                        }
+                        .goodsView_r .viewSize_b ul li.detail2ss{
+                            width: 34px;
+                            height: 34px;
+                            padding: 0;
+                            border: 2px #ff9900 solid;
+                            margin-top: 5px;
+                            background: url("../imgs/item_sel.gif") no-repeat 20px 20px,url('../imgs/detail2ss.jpg');
+                        }
+                        .goodsView_r .viewSize_b ul li.buyNumjia{
+                            width: 15px;
+                            height: 15px;
+                            border: none;
+                            margin-top: 15px;
+                            background: url("../imgs/pro_detial_icon1.png") no-repeat -16px -301px;
+                        }.goodsView_r .viewSize_b ul li.buyNumjian{
+                            width: 15px;
+                            height: 15px;
+                            border: none;
+                            margin-top: 15px;
+                            background: url("../imgs/pro_detial_icon1.png") no-repeat -0 -301px;
+                        }
+                        .goodsView_r .viewSize_b ul li.buyNum{
+                            width: 28px;
+                            height: 18px;
+                            margin-top: 10px;
+                            padding: 0px;
+                        }
+                        .goodsView_r .viewSize_b ul li #buyNum{
+                            border: none;
+                            background: none;
+                            width: 28px;
+                            height: 16px;
+                            line-height: 20px;
+                            padding: 0;
+                            text-align: center;
+
+                        }
+                    .goodsView_r .collect{
+                        width: 95px;
+                        height: 25px;
+                        position: absolute;
+                        bottom: 8px;
+                        right: 6px;
+                        background: url("../imgs/pro_detial_icon1.png") no-repeat 0 -178px;
+                    }.goodsView_r .collect:hover{
+                        background: url("../imgs/pro_detial_icon1.png") no-repeat 0 -207px;
+                     }
+
+            .goodsView_r .inputCart{
+                width: 543px;
+                height: 68px;
+                border-top: 1px #999 dotted;
+                position: relative;
+                margin-top: 5px;
+            }
+                .goodsView_r .inputCart p{
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    color: #666;
+                    text-align: left;
+                }
+                    .goodsView_r .inputCart p span{
+                        color: #c00;
+                        margin: 0 3px;
+                        font-weight: bold;
+                    }
+                .goodsView_r .inputCart .buyNow{
+                    position: absolute;
+                    width: 137px;
+                    height: 44px;
+                    cursor: pointer;
+                    background: url("../imgs/pro_detial_icon1.png") no-repeat 0 -447px;
+                    right: 185px;
+                    bottom: 10px;
+                }.goodsView_r .inputCart .buyNow:hover{
+                    background: url("../imgs/pro_detial_icon1.png") no-repeat 0 -498px;
+                }
+                .goodsView_r .inputCart .intoCart{
+                    position: absolute;
+                    width: 171px;
+                    height: 44px;
+                    cursor: pointer;
+                    background: url("../imgs/pro_detial_icon1.png") no-repeat -1px -124px;
+                    right: 5px;
+                    bottom: 10px;
+                }.goodsView_r .inputCart .intoCart:hover{
+                    background: url("../imgs/pro_detial_icon1.png") no-repeat -1px -394px;
+                }
+
+            .goodsView_r .customer{
+                width: 543px;
+                height: 45px;
+                border-top: 1px #999 dotted;
+            }
+                .goodsView_r .customer ul{
+                    overflow: hidden;
+                    margin-top: 5px;
+                }
+                    .goodsView_r .customer ul li{
+                        float: left;
+                        color: #777777;
+                    }
+                    .goodsView_r .customer ul li.customer_tit{
+                        width: 87px;
+                        text-align: left;
+                        font-family: Tahoma;
+                        color: #999;
+                    }
+                    .goodsView_r .customer ul li.sale{
+                        width: 36px;
+                    }
+                    .goodsView_r .customer ul li.qq{
+                        width: 109px;
+                    }
+            .goodsView_r .safeguard{
+                width: 543px;
+                height: 45px;
+                line-height: 30px;
+                border-top: 1px #999 dotted;
+                text-align: left;
+            }
+                .goodsView_r .safeguard span{
+                    text-align: left;
+                    float: left;
+                    width: 87px;
+                    font-family: Tahoma;
+                    line-height: 45px;
+                    color: #999;
+                }
+                .goodsView_r .safeguard img{
+                    float: left;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                }
+            
+             .motai{
+                 position: fixed;
+                 z-index: 99;
+                 height: 100%;
+                 width: 100%;
+                 background: rgba(0,0,0,0.5);
+                 display: none;
+            }
+                 .motai .box{
+                    position: fixed;
+                    top: 290px;
+                    left: 520px;
+                    z-index: 100;
+                    width: 410px;
+                    height: 170px;
+                    border: 5px #ccc solid;
+                    background: #ffffff;
+                }
+                    .motai .box > img{
+                        float: left;
+                    }
+                    .motai .box > P {
+                        padding: 0 5px;
+                        height: 30px;
+                        font: 12px/30px "";
+                        color: #ff0000;
+                        text-align: left;
+                        position: absolute;
+                        left: 100px;
+                        top: 25px;
+                    }
+                    .motai .box .motaiText{
+                        padding: 0 5px;
+                        height: 30px;
+                        font:12px/30px "";
+                        color: #333;
+                        text-align: left;
+                        position: absolute;
+                        left: 100px;
+                        top: 50px;
+                    }
+                        .motai .box .motaiText span{
+                            color: #cc0000;
+                            font-weight: bold;
+                            font-family: 'Arial';
+                        }
+                        .motai .box .motaiText a{
+                            color: #cc0000;
+                            font-weight: bold;
+                            font-family: 'Arial';
+                        }
+                    .motai .box .nowPay {
+                        width: 89px;
+                        height: 37px;
+                        background: url("../imgs/scn04.png") no-repeat 0 -198px;
+                        float: left;
+                        margin-right: 10px;
+                        position: absolute;
+                        left: 100px;
+                        top: 90px;
+                        cursor: pointer;
+                    }
+                        .motai .box .nowPay a{
+                            font:14px/37px "";
+                        }
+                    .motai .box > a{
+                        color: #3366dd;
+                        float: left;
+                        position: absolute;
+                        left: 204px;
+                        top: 90px;
+                    }
+                    .motai .box .motai_x{
+                        width: 13px;
+                        height: 13px;
+                        position: absolute;
+                        cursor: pointer;
+                        top: 5px;
+                        right: 5px;
+                    }
+
+/*tab*/
+.tab{
+    width: 990px;
+    height: 38px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-bottom: 1px #ccc solid;
+}
+    .tab a{
+        float: left;
+        height: 30px;
+        padding: 0 12px;
+        margin: 7px 5px 0px 5px;
+        border: 1px solid #eeeeee;
+        text-align: center;
+        line-height: 30px;
+        background: url("../imgs/sum_tbg.gif") repeat-x 0 7px;
+        border-radius: 2px;
+    }
+    .tab a.tabActive{
+        height: 34px;
+        background: #ffffff;
+        padding: 0 15px;
+        border-top: 2px #c0c0c0 solid;
+        font: 14px/34px "";
+        font-weight: bold;
+        margin-top: 3px;
+    }
+
+/*detail*/
+.detail{
+    margin: 0 auto;
+    margin-top: 8px;
+    width: 990px;
+}
+    .detail div{
+        width: 100%;
+        overflow: hidden;
+    }
+    .detail div img{
+        float: left;
+        margin:5px 10px;
+    }
+        .detail .detail_state div p{
+            width: 142px;
+            height: 74px;
+            padding: 10px;
+            background: #a4c917;
+            float: left;
+            margin: 2px 2px 2px 10px;
+        }
+        .detail .detail_state p img{
+            float: left;
+            margin: 0px;
+        }
+        .detail .detail_state .state{
+            width: 568px;
+            height: 74px;
+            padding: 10px;
+            color:#333;
+            background: #ececec;
+            line-height: 150%;
+            float: left;
+            margin: 2px;
+            text-align: left;
+        }
+
+    .detal .comment{
+        width: 990px;
+        margin:0 auto;
+        padding: 10px;
+    }
+        .detail .comment .comment_t{
+            width: 990px;
+            height: 130px;
+            border:1px #ccc solid;
+            margin-bottom: 10px;
+        }
+            .comment .comment_t p{
+                padding-left: 10px;
+                width: 100%;
+                height: 28px;
+                background: #f5f5f5;
+                color: #333;
+                line-height: 28px;
+                text-align: left;
+                font-weight: bold;
+            }
+            .comment .comment_t .comText_l{
+                width: 671px;
+                height: 77px;
+                padding: 0 10px 0 30px;
+                text-align: left;
+                color: #999999;
+                border-right:1px #eee solid;
+                margin: 10px;
+                float: left;
+            }
+            .comment .comment_t .comText_r{
+                width: 280px;
+                height: 108px;
+                padding-top: 8px;
+                padding-left: 50px;
+                float:left;
+            }
+                .comment_t .comText_r p{
+                    text-align: left;
+                    color: #777777;
+                    background: none;
+                    padding-left: 0px;
+                    font-weight: normal;
+                }
+                .comment_t .comText_r #comment{
+                    width: 89px;
+                    height: 37px;
+                    margin-top: 5px;
+                    margin-right: 8px;
+                    line-height: 37px;
+                    float: left;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-size: 14px;
+                    background: url("../imgs/scn04.png" ) no-repeat 0 -198px;
+                    cursor: pointer;
+                }
+                .comment_t .comText_r #lookCom{
+                    width: 102px;
+                    height: 37px;
+                    margin-top: 5px;
+                    float: left;
+                    margin-right: 8px;
+                    line-height: 37px;
+                    color: #666666;
+                    border: 1px #e0e0e0 solid;
+                    cursor: pointer;
+                    background: url("../imgs/combg.gif")repeat-x 0px 6px;
+                }
+        .comment .comment_b{
+            width: 990px;
+            height: 61px;
+            border: 1px solid #d5d5d5;
+        }
+            .comment .comment_b p{
+                width: 974px;
+                height: 34px;
+                padding-left: 7px;
+                margin: 0 auto;
+                background: #f5f4ec;
+                border:1px #e5ddc7 solid;
+                text-align: left;
+                margin-top: 12px;
+                line-height: 34px;
+            }
+
+    .detail .sum{
+        width: 990px;
+        margin: 5px auto;
+    }
+        .detail .sum .sum_t{
+            width: 990px;
+            margin: 5px auto;
+        }
+            .detail .sum .sum_t p{
+                width: 990px;
+                height: 29px;
+                padding-left: 10px;
+                background: #f5f5f5;
+                color: #333;
+                line-height: 29px;
+                text-align: left;
+                font-weight: bold;
+                border:1px #ccc solid;
+            }
+        .detail .sum .sum_tit{
+            width: 330px;
+            height: 26px;
+            color: #333;
+            line-height: 26px;
+            font-weight: bold;
+            border:1px #ccc solid;
+            background:url("../imgs/sum_tbg.gif") repeat-x 0 0;
+            float: left;
+        }
+        .detail .sum .sum_tlt{
+            width: 330px;
+            height: 26px;
+            color: #333;
+            line-height: 26px;
+            border:1px #ccc solid;
+            background:#fff;
+            float: left;
+        }
+        .detail .sum .addUp{
+            text-align: left;
+            height: 17px;
+            line-height: 17px;
+
+        }
+            .detail .sum .addUp span{
+                color:#c00;
+                font-weight:bold;
+            }
+
+    .detail .consult{
+        width: 990px;
+        height: 435px;
+        margin: 10px auto;
+        border:1px #ccc solid;
+    }
+        .detail .consult p{
+            width: 988px;
+            height: 31px;
+            border-bottom:1px solid #CCCCCC;
+            background: url("../imgs/sum_tbg.gif") repeat-x ;
+            text-align: left;
+            color: #333;
+            line-height: 31px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+            .detail .consult p span{
+                font-weight:normal;
+            }
+            .detail .consult a.consultPic{
+                width: 84px;
+                height: 23px;
+                background: url("../imgs/pro_detial_icon1.png") no-repeat -98px -220px;
+                float: right;
+                margin-top: 4px;
+                margin-right: 10px;
+            }
+        .detail .consult_b{
+            width: 988px;
+            height: 398px;
+            margin-top: 5px;
+            padding: 7px;
+        }
+            .detail .consult_b p.consult_b_p{
+                width: 974px;
+                height: 32px;
+                margin: 7px 0;
+                padding-left: 7px;
+                color: #333333;
+                background: #fffaee;
+                text-align: left;
+                font-weight: normal;
+                border: none;
+            }
+            .detail .consult_b .consult_form{
+                width: 974px;
+                height: 38px;
+                margin: 5px auto;
+            }
+                .detail .consult_b .consult_form .style{
+                    width: 974px;
+                    height: 48px;
+                    padding-left: 20px;
+                    line-height: 48px;
+                    background: #ffefd0;
+                    text-align: left;
+                    border-radius: 4px 4px 0 0;
+                }
+                    .consult_tit{
+                        height: 48px;
+                        text-align: left;
+                        color: #333;
+                        line-height: 48px;
+                        font-weight: bold;
+                    }
+                    .consult_form .style p{
+                        float: right;
+                        width: 217px;
+                        height: 48px;
+                        line-height: 48px;
+                        text-align: left;
+                        margin-right: 10px;
+                    }
+                        .consult_form .style p.fastHelp{
+                            background: none;
+                            color: #333333;
+                            font-weight: normal;
+                            border: none;
+                        }
+                            .consult_form .style p.fastHelp span{
+                                margin-right: 5px;
+
+                            }
+                            .consult_form .style p.fastHelp span a{
+                                color: #009900;
+                                text-align: left;
+                            }
+                .detail .consult_b .consult_form .title{
+                    width: 974px;
+                    height: 31px;
+                }
+                    .consult_form .title p{
+                        width: 83px; text-align: right ; margin-right: 5px;
+                        float: left;
+                    }
+                    .consult_form .title  span{
+                        width: 490px;
+                        height: 31px;
+                        line-height: 31px;
+                        text-align: left;
+                        font-size: 14px;
+                        float: left;
+                    }
+                        .consult_form .title  span img{
+                            margin: 10px 0 0 0;
+                            float: left;
+                        }
+                .detail .consult_b .consult_form .consultText{
+                    height: 130px;
+                }
+                    .consult_b .consult_form .consultText p{
+                        width: 85px;
+                        height: 130px;
+                        float: left;
+                    }
+                .detail .consult_b .consult_form .consultSub{
+                    width: 860px;
+                    height: 50px;
+                    padding-left: 85px;
+                    padding-top: 5px;
+                }
+                    .detail .consult_b .consult_form .subinpb{
+                        width: 74px;
+                        height: 26px;
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: #ffffff;
+                        margin-right: 30px;
+                        float: left;
+                        background: url("../imgs/scn04.png") no-repeat 0 -142px;
+                    }
+                    .consult_form .consultSub_tit{
+                        height: 26px;
+                        float: left;
+                        line-height: 26px;
+                        color: #ff6600;
+                        margin-right: 10px;
+                    }
+
+/*relateCom*/
+.relateCom{
+    width: 990px;
+    height: 59px;
+    margin:12px auto;
+}
+    .relateCom p{
+        height: 29px;
+        line-height: 29px;
+        color: #666666;
+        font-weight:bold;
+        text-align: left;
+        border-bottom: 1px #ccc dashed;
+    }
+    .relateCom a{
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        text-align: left;
+        color: #999999;
+        float: left;
+        margin-right: 5px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+

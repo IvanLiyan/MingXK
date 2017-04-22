@@ -1,0 +1,317 @@
+/*filter*/
+.filter{
+    border: 1px #CCCCCC solid;
+    position: relative;
+    width: 996px;
+    margin: 0 auto;
+}
+    .filter header{
+        height: 30px;
+        width: 100%;
+        background: url("../imgs/filter_icon.png")no-repeat 250px top, #f1f1f1;
+    }
+        .filter header p{
+        font:14px/30px "";
+        color: #333333;
+        padding-left: 15px;
+        font-weight: bold;
+            float: left;
+        }
+        .filter header>span{
+            font:12px/30px "";
+            color: #999;
+            text-align: left;
+            float: left;
+            margin-left: 5px;
+        }
+            .filter header>span>span{
+                color: #c00;
+            }
+    .filter dl{
+        width: 994px;
+        padding: 12px 10px 8px 70px;
+        position: relative;
+        border-bottom: 1px #ccc dotted;
+        overflow: hidden;
+        background: #fafafa;
+        color: #888888;
+    }
+        .filter dl .more{
+            position: absolute;
+            right: 58px;
+        }
+        .filter dt{
+            position: absolute;
+            left: 0;
+            text-align: right;
+            width: 70px;
+            height: 16px;
+            font:12px/1.5em "";
+        }
+        .filter dd{
+            float: left;
+            width: 110px;
+            height: 23px;
+            font: 12px/1.5em "Arial";
+            color: #333;
+            text-align: left;
+        }
+        .filter dd:hover a{
+            color: #ff0000;
+            text-decoration: underline;
+        }.filter dd:hover span{
+            color: #ff0000;
+            text-decoration: underline;
+        }
+        .filter dd span{
+            color: #999;
+        }
+        .filter .close,.open{
+            position: absolute;
+            width:98px;
+            height:34px;
+            font:12px/34px "";
+            left: 450px;
+            bottom: -34px;
+            box-shadow: -1px  2px 3px  #ccc;
+            border-top: none;
+            border-radius: 2px;
+            color: #999;
+            z-index: 1;
+            background: url("../imgs/jianb.gif") repeat-x 0 4px;
+            cursor: pointer;
+        }
+        .filter .close:hover,.open:hover{
+            color: #000;
+        }
+    .filter .filterBox{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .filter .actived{  /*多选显示的button*/
+        width: 100%;
+        height: 60px;
+        padding-top: 16px;
+    }
+        .filter  #submit,#cancel{
+            width: 44px;
+            height: 24px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 auto;
+            margin-left: 6px;
+            margin-right: 6px;
+            color: #666;
+            font: 12px/24px "";
+            background: #f9f9f9;
+            border:1px #ccc solid;
+            border-radius: 3px;
+        }
+
+
+/*arrange start*/
+.arrange{
+    width: 996px;
+    margin:0 auto;
+    margin-top: 56px;
+    border: 1px #ccc solid;
+    border-top:5px #dbdbdb solid;
+    background: #f7f7f7;
+    padding: 4px 5px 0 10px;
+    overflow: hidden;
+}
+    .arrange .arrangeWay{
+        float: left;
+        color: #666;
+    }
+    .arrange>a{
+        box-sizing: content-box;
+        padding: 0 16px 0 7px;
+        text-align: left;
+        display: block;
+        width: 24px;
+        height: 20px;
+        font:12px/20px "";
+        color: #666666;
+        float: left;
+        margin: 8px 6px 0 3px;
+        background: url("../imgs/filter_icon.png") no-repeat 33px -159px,#ccc;
+    }
+    .arrange>a:hover{
+        color: #ffffff;
+        background: url("../imgs/filter_icon.png") no-repeat 33px -181px,#666;
+    }
+    .arrange .allNumber{
+        float: right;
+        margin-right: 5px;
+    }
+        .arrange .allNumber span{
+            color: #ff0000;
+        }
+/*arrange over*/
+
+
+/*goodslist start*/
+
+.goodslist{
+    width: 996px;
+    padding: 10px 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+    .goodslist dl{
+        width: 222px;
+        height: 324px;
+        margin: 20px 11px 10px 11px;
+        float: left;
+        border:1px #eee solid;
+        position: relative;
+    }
+    /*.goodslist dl:hover{*/
+        /*background: #f0f0f0;*/
+    /*}*/
+        .goodslist dl dt{
+            width: 220px;
+            height: 252px;
+
+            position: relative;
+            border-bottom: 1px #eee solid;
+        }
+            .goodslist dl dt>img{
+                position: absolute;
+                width: 216px;
+                height: 210px;
+                left: 2px;
+                top: 2px;
+                z-index: 1;
+            }
+            .goodslist dl dt>a{
+                width: 216px;
+                height: 20px;
+                background: #cc3333;
+                left: 2px;
+                bottom: 36px;;
+                font: 12px/20px "";
+                color: #ffffff;
+                position: absolute;
+                z-index: 2;
+            }
+            .goodslist dl dt>div{
+                width: 216px;
+                height: 36px;
+                position: absolute;
+                left: 2px;
+                bottom: 0px;
+                background: #ffffff;
+            }
+            .goodslist dl dt div .leftJt{
+                margin-left: 5px;
+                font:20px/30px "Arial";
+                float: left;
+                color: #ccc;
+            }.goodslist dl dt div .rightJt{
+                font:20px/30px "Arial";
+                float: right;
+                color: #ccc;
+                margin-right: 5px;
+            }
+             .goodslist dl dt div ul{
+                 margin-top: 2px;
+                 float: left;
+                 width: 170px;
+                 margin-left: 10px;
+                 overflow: hidden;
+             }
+                .goodslist dl dt div ul li {
+                    float: left;
+                    border: 1px #eee solid;
+                }.goodslist dl dt div ul li:hover {
+                    border: 2px #ff0000 solid;
+                }
+                    .goodslist dl dt div ul li a {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+
+                    }
+    .goodslist dl dd{
+        width: 218px;
+        height: 60px;
+        margin: 0 auto;
+    }
+        .goodslist dl dd ul{
+            box-sizing: content-box;
+            width: 203px;
+            height: 85px;
+            padding: 5px 5px 5px 10px;
+            margin-top: 2px;
+        }
+            .goodslist dl dd ul li{
+                width: 100%;
+                margin: 3px 0;
+            }
+            .goodslist dl dd ul li a{
+                width: 100%;
+                float: left;
+                text-align: left;
+                font:12px/1.5em "";
+                color:#333;
+            }.goodslist dl dd ul li a span{
+                text-align: left;
+                font:12px/1.5em "";
+                color:#333;
+            }
+             .goodslist dl dd ul li .nhj{
+                 float: left;
+                 margin-top: 2px;
+             }
+             .goodslist dl dd ul li .money{
+                 color: #c00;
+                 font: 14px/1.5em "Arial";
+                 font-weight: bold;
+             }
+            .goodslist dl dd ul li .money:hover{
+                text-decoration: none;
+            }
+
+             .goodslist dl dd ul li .oriMoney{
+                 color: #888;
+                 text-decoration: line-through;
+                 font:12px/1.5em "Arial";
+                 margin-left: 5px;
+             }
+
+             .goodslist dl dd ul li:nth-child(3) a{
+                 color: #888;
+             }
+             .goodslist .size{
+                 width: 220px;
+                 display: none;
+                 height: 28px;
+                 position: absolute;
+                 left: 0;
+                 bottom: -28px;
+                 background: #f0f0f0;
+                 padding-left: 10px;
+             }
+            .goodslist .size a{
+                width: 100%;
+                float: left;
+                text-align: left;
+                box-sizing: content-box;
+                padding-bottom: 10px;
+                font: 12px/1.5em "";
+                color: #000;
+            }
+
+/*goodslist over*/
+
+.line{
+    width: 990px;
+    height: 54px;
+    margin: 0 auto;
+    border-top: 1px #CCCCCC dotted;
+}

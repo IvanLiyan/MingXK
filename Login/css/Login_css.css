@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form,fieldset, legend, img {margin:0;padding:0; }
+*{ box-sizing:border-box;}
+fieldset, img { border:none; }
+ul li { list-style:none;}
+body{ font:12px/3em Arial,"微软雅黑"; color:#777; text-align:center;}
+a { color:#333; text-decoration:none;}
+a :hover{ text-decoration:underline;}
+
+/*header*/
+header{
+    height: 120px;
+    padding: 20px 0;
+}
+    header div{
+        width: 990px;
+        margin: 0 auto;
+        height: 73px;
+    }
+        header div img{
+            float: left;
+            margin-top: 10px;
+        }
+
+/*loginBody*/
+.loginBody{
+    width: 990px;
+    height: 402px;
+    margin: 0 auto;
+}
+    .loginBody .body_l{
+        width: 380px;
+        height: 380px;
+        float: left;
+        margin-bottom: 24px;
+    }
+        .loginBody .body_l img{
+            float: left;
+            margin-top: 5px;
+        }
+
+    .loginBody .body_r{
+        width: 594px;
+        height: 402px;
+        float: left;
+        padding-left: 90px;
+        margin-bottom: 24px;
+    }
+        .loginBody .body_r > p{
+            width: 450px;
+            height: 28px;
+        }
+            .loginBody .body_r > p img{
+                float: left;
+            }
+        .loginBody .body_r .loginBox{
+            width: 450px;
+            height: 374px;
+        }
+
+            .loginBox .loginBox_t{
+                width: 384px;
+                height: 290px;
+                background: #fafafa;
+                box-shadow: 3px 3px #f5f5f5;
+                border: 1px solid #eee;
+                padding: 40px;
+            }
+                .loginBox .loginBox_t .error1{
+                    position: absolute;
+                    height: 20px;
+                    padding: 0 5px;
+                    top: 10px;
+                    left: 100px;
+                    border:1px solid #e6594e;
+                    background: #fceae8;
+                }
+                .loginBox .loginBox_t .error1 span{
+                    display: block;
+                    height: 20px;
+                    line-height: 20px;
+                    color: #e9594e;
+                    float: left;
+                    width: 160px;
+                    text-align: left;
+                    margin: 0;
+                }
+
+                .loginBox .loginBox_t p{
+                    height: 30px;
+                    width: 100%;
+                    font:14px/30px "";
+                    color: #666666;
+                    text-align: left;
+                    margin-bottom: 15px;
+                }
+                    .loginBox .loginBox_t span{
+                        display: block;
+                        width: 60px;
+                        height: 30px;
+                        float: left;
+                    }
+                    .loginBox .loginBox_t .inpt{
+                        width: 232px;
+                        height: 30px;
+                        background: #ffffff;
+                        border: 1px solid #ccc;
+                    }
+                        .loginBox .loginBox_t span.checkPic{
+                            margin-left: 5px;
+                            width: 70px;
+                            height: 30px;
+                            background: #eee;
+                        }
+                            .loginBox_t span.checkPic img{
+                                margin-left: 5px;
+                                margin-top: 8px;
+                                float: left;
+                            }
+                        .loginBox .loginBox_t  a.checkText{
+                            display: block;
+                            height: 30px;
+                            line-height: 30px;
+                            color: #666666;
+                            text-align: left;
+                            font-size: 12px;
+                            float: left;
+                        }
+                        .loginBox .loginBox_t  a.checkText:hover{
+                            text-decoration: underline;
+                        }
+                .loginBox .loginBox_t div.loginBut{
+                    width: 300px;
+                    height: 45px;
+                    float: left;
+                }
+                    .loginBox .loginBox_t div.loginBut p{
+                        width: 89px;
+                        height: 38px;
+                        background: url("../imgs/scn04.png") no-repeat 0 -197px;
+                        color: #ffffff;
+                        font-weight: bold;
+                        line-height: 38px;
+                        float: left;
+                        text-align: center;
+                        margin-left: 60px;
+                        cursor:pointer;
+                    }
+                    .loginBox_t div.loginBut  a{
+                        color: #666666;
+                        float: left;
+                        display: block;
+                        margin-top: 12px;
+                        margin-left: 10px;
+                    }
+                    .loginBox_t div.loginBut  a:hover{
+                        color: red;
+                        text-decoration:underline;
+                    }
+                .loginBox .loginBox_t div.register{
+                    width: 250px;
+                    height: 58px;
+                    margin-left: 60px;
+                    float: left;
+                }
+                    .loginBox .loginBox_t div.register span{
+                        display: block;
+                        width: 120px;
+                        height:58px;
+                        line-height: 58px;
+                        color: #999999;
+                        float: left;
+                        text-align: left;
+                        font-size: 12px;
+                        text-decoration:underline;
+                    }
+                    .logonBox .loginBox_t div.register span:hover{
+                        color: red;
+                        text-decoration:underline;
+                        cursor:pointer;
+                    }
+            .loginBox .loginBox_b{
+                width: 384px;
+                float: left;
+            }
+                .loginBox .loginBox_b p{
+                    width: 100%;
+                    float: left;
+                    color: #999999;
+                    text-align: left;
+                }
+                .loginBox .loginBox_b ul {
+                    float: left;
+                    width: 390px;
+                    height: 45px;
+                }
+                    .loginBox .loginBox_b ul li{
+                        width: 115px;
+                        height: 20px;
+                        float: left;
+                        margin-top: 5px;
+                    }
+                    .loginBox .loginBox_b ul li img{
+                        float: left;
+                    }
+
+/*footer*/
+footer{
+    width: 980px;
+    height: 96px;
+    margin: 0 auto;
+    border-top: 2px solid #ce3c3b;
+    padding: 17px 0;
+    margin-top: 30px;
+}
+    footer > span{
+        display:block;
+        width: 850px;
+        height: 29px;
+        margin:0 auto;
+        line-height:2em;
+        font-family:'宋体';
+    }
+        footer > span a{
+            color: #777777;
+        }
+        footer span a:hover{
+            text-decoration:underline;
+            color: #f00;
+        }
+    footer p{
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+

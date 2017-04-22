@@ -1,0 +1,186 @@
+
+.register {
+    width: 990px;
+    height: 480px;
+    margin:0 auto;
+}
+    .register > p{
+        text-align: right;
+        width: 780px;
+        height: 30px;
+        margin: 0 auto;
+    }
+        .register > p a{
+            color: #999999;
+            line-height:30px;
+        }
+        .register > p a:hover{
+            color: #ff0000;
+            text-decoration:underline;
+        }
+
+    .register .registerBox{
+        width: 780px;
+        height: 440px;
+        border: 1px solid #efefef;
+        border-radius: 2px;
+        box-shadow: 0 0 8px #e5e5e5;
+        margin: 10px auto;
+        background: url('../imgs/signup.jpg') no-repeat center bottom;
+    }
+        .registerBox > p{
+            width: 100%;
+            height: 31px;
+            padding-left: 10px;
+            background: #f8f8f8;
+            text-shadow: 1px 1px #fff;
+            color: #888;
+            font-size: 16px;
+            font-weight:bold;
+            text-align:left;
+            line-height: 31px;
+        }
+    .registerBox .registerBox_b_l{
+        width: 506px;
+        height: 407px;
+        float: left;
+        padding-top: 75px;
+        position: relative;
+    }
+    .registerBox .error1{
+        position: absolute;
+        height: 20px;
+        padding: 0 5px;
+        top: 45px;
+        left: 150px;
+        border:1px solid #e6594e;
+        background: #fceae8;
+        display: none;
+    }
+   .registerBox .error1 span{
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        color: #e9594e;
+        float: left;
+        padding: 0 5px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .registerBox .ok1{
+        position: absolute;
+        height: 20px;
+        padding: 0 5px;
+        top: 45px;
+        left: 150px;
+        border:1px solid #99d073;
+        background: #ebf7e3;
+        display: none;
+    }
+    .registerBox .ok1 span{
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        color: #618605;
+        float: left;
+        padding: 0 5px;
+        text-align: left;
+        margin: 0;
+    }
+        .registerBox_b_l p{
+            width: 100%;
+            height: 30px;
+            float: left;
+            margin-bottom: 15px;
+        }
+            .registerBox_b_l p span {
+                width: 150px;
+                height: 30px;
+                text-align: right;
+                display: block;
+                line-height: 30px;
+                font-size: 14px;
+                float: left;
+                color: #666666;
+            }
+            .registerBox_b_l p .inpt{
+                width: 232px;
+                height: 30px;
+                float: left;
+                border:1px #ccc solid;
+                color: #666;
+            }
+            .registerBox_b_l p .read{
+                display: inline;
+                font-size:12px;
+
+                float: none;
+            }
+            .registerBox_b_l span.checkPic{
+                            margin-left: 5px;
+                            width: 70px;
+                            height: 30px;
+                            background: #eee;
+                        }
+            .registerBox_b_l span.checkPic img{
+                            margin-left: 5px;
+                            margin-top: 8px;
+                            float: left;
+                        }
+            .registerBox_b_l  a.checkText{
+                            display: block;
+                            height: 30px;
+                            line-height: 30px;
+                            color: #666666;
+                            text-align: left;
+                            font-size: 12px;
+                            float: left;
+                        }
+            .registerBox_b_l  a.checkText:hover{
+                            text-decoration: underline;
+                        }
+        .registerBox_b_l .registerBut{
+            width: 91px;
+            height: 38px;
+            font:14px/38px "";
+            color: #ffffff;
+            font-weight: bold;
+            float: left;
+            margin-left: 155px;
+            cursor:pointer;
+            background: url("../imgs/scn04.png") no-repeat  0 -198px;
+        }
+    .registerBox .registerBox_b_r {
+        width: 272px;
+        height: 300px;
+        border-left: 1px #ccc dashed;
+        margin-top: 50px;
+        padding-top: 55px;
+        float: left;
+    }
+        .registerBox .registerBox_b_r p {
+            font-weight: bold;
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 2px;
+            color: #333;
+        }
+        .registerBox .registerBox_b_r .nowLogin{
+            width: 91px;
+            height: 32px;
+            margin:5px auto;
+            margin-bottom:40px;
+            font:14px/32px "";
+            font-weight:bold;
+            cursor:pointer;
+            color: #cc6666;
+            background: url("../imgs/loginbg.png") no-repeat;
+        }
+        .registerBox .registerBox_b_r .nowLogin:hover{
+            color: #cc0000;
+        }
+
+
+
+

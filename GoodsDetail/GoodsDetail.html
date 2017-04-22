@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="css/GoodsDetail_css.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_css.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/GoodsDetail_js.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="../common/js/common_js.js"></script>
+</head>
+<body>
+
+<!--模态框-->
+<div class="motai">
+    <div class="box">
+        <img src="imgs/right.png" />
+        <p>您选购的商品已经添加到购物车中</p>
+        <div class="motaiText">购物车共有 <span></span> 件商品，合计：<a></a></div>
+        <div class="nowPay"><a href="../Carts/Carts.html" style="font-weight: bold;color: #ffffff;">立即结算</a></div>
+        <a href="javascript:;" class="keepBuy">继续购物 》》</a>
+        <div class="motai_x"><img src="imgs/close.png"  style="float: left;"/></div>
+    </div>
+</div>
+
+<!-- head start -->
+<header>
+    <div class="head_t layout">
+        <img src="imgs/head_shu.png"><span><img src="imgs/telephone.png"/></span>
+        <img src="imgs/head_shu.png"><span><a href="#">名鞋库客服</a><a href="#"><img src="imgs/head_QQ.png"></a></span>
+        <img src="imgs/head_shu.png"><span><a href="#"  class="collect">收藏名鞋库</a></span>
+        <img src="imgs/head_shu.png"><span class="phoneShoes"><a href="#">手机名鞋库</a>
+        <div class="phoneShoesH">
+                <span style="margin-right: 10px"><img src="imgs/phone_scn1.png"></span>
+                <span><img src="imgs/phone_scn2.png"></span>
+        </div></span>
+        <img src="imgs/head_shu.png"><span class="myShoes"><a href="#"><a href="#">我的名鞋库</a></a><div class="myShoesH">
+            <ul>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的积分</a></li>
+                <li><a href="#">优惠券</a></li>
+                <li><a href="#">商品收藏</a></li>
+                <li><a href="#">收获地址</a></li>
+                <li><a href="#">密码管理</a></li>
+            </ul>
+        </div></span>
+        <img src="imgs/head_shu.png">
+        <div id="noLogin">
+            <span><a href="../Login/Register.html" style="color: #fd751a;">免费注册</a></span>
+            <span><a href="../Login/Login.html" style="color: #fd751a;">欢迎登录名鞋库</a></span>
+        </div>
+
+        <div id="hasLogin">
+            欢迎回来，
+            <span id="username">111</span>
+            <a id="logout" href="javascript:;">[退出]</a>
+        </div>
+    </div>
+    <div style="background: #ffffff; height: 78px;">
+        <div class="head_b layout">
+            <img src="imgs/newlogo.png">
+            <input type="text" placeholder=" 外套" id="inpt"><input type="button" value="搜索" id="btn">
+            <p>热搜：<span><a href="#">跑步鞋</a><a href="#">帆布鞋</a><a href="#">T恤</a><a href="#">胸衣Bra</a>
+                <a href="#">紧身打底裤</a><a href="#">三叶草</a></span></p>
+            <div id="buy"><a href="../Carts/Carts.html"> 购物车 <span>0</span> 件</a></div>
+        </div>
+    </div>
+</header>
+<!-- head over -->
+
+<!-- nav start -->
+<div class="nav">
+    <ul class="navAll">
+        <li class="nav_allGoods"><a href="../GoodsList/GoodsList.html" >所有商品分类</a>
+            <ul class="secondNav">
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">运动休闲鞋</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox" >
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit menShoes">运动男鞋</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">休闲鞋</a><a href="../GoodsList/GoodsList.html"><span>训练鞋</span></a><a href="../GoodsList/GoodsList.html"><span>帆布鞋</span></a><a href="../GoodsList/GoodsList.html">板鞋</a><a href="../GoodsList/GoodsList.html">网球鞋</a></p>
+                            </div>
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit womenShoes">运动女鞋</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">休闲鞋</a><a href="../GoodsList/GoodsList.html">训练鞋</a><a href="../GoodsList/GoodsList.html"><span>健步鞋</span></a><a href="../GoodsList/GoodsList.html">帆布鞋</a><a href="../GoodsList/GoodsList.html">板鞋</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">搜索热词</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">2016新品</a><a href="../GoodsList/GoodsList.html"><span>小白鞋</span></a><a href="../GoodsList/GoodsList.html">情侣款</a><a href="../GoodsList/GoodsList.html">内增高</a><a href="../GoodsList/GoodsList.html"><span>复古鞋</span></a><a href="../GoodsList/GoodsList.html">匡威帆布鞋</a><a href="../GoodsList/GoodsList.html">三叶草</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热门系列</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">新百伦574</a><a href="../GoodsList/GoodsList.html"><span>air max</span></a><a href="../GoodsList/GoodsList.html">三叶草ZX</a><a href="../GoodsList/GoodsList.html">All star</a><a href="../GoodsList/GoodsList.html"><span>开口笑</span></a><a href="../GoodsList/GoodsList.html">boost</a><a href="../GoodsList/GoodsList.html">阿甘鞋</a><a href="../GoodsList/GoodsList.html"><span>996系列</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">运动休闲服</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox" style="top: -43px;" >
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit menClothes">男子运动服</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">长袖T恤</a><a href="../GoodsList/GoodsList.html">卫衣</a><a href="../GoodsList/GoodsList.html">夹克</a><a href="../GoodsList/GoodsList.html">运动长裤</a><a href="../GoodsList/GoodsList.html"><span>外套</span></a></p>
+                            </div>
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit womenClothes">女子运动服</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">长袖T恤</a><a href="../GoodsList/GoodsList.html"><span>卫衣</span></a><a href="../GoodsList/GoodsList.html"><span>运动长裤</span></a><a href="../GoodsList/GoodsList.html">外套</a><a href="../GoodsList/GoodsList.html">夹克</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热门搜索</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>鹿晗同款</span></a><a href="../GoodsList/GoodsList.html"><span>2016新品</span></a><a href="../GoodsList/GoodsList.html"><span>彭于晏同款</span></a><a href="../GoodsList/GoodsList.html">棒球服</a><a href="../GoodsList/GoodsList.html">三条纹</a><a href="../GoodsList/GoodsList.html">三叶草服装</a><a href="../GoodsList/GoodsList.html">NEO服装</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">跑步</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox"  style="top: -86px;">
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit menRun">男子跑步</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">长袖T恤</a><a href="../GoodsList/GoodsList.html">跑步鞋</a><a href="../GoodsList/GoodsList.html">跑步裤</a><a href="../GoodsList/GoodsList.html">外套夹克</a><a href="../GoodsList/GoodsList.html">配件</a></p>
+                            </div>
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit womenRun">女子跑步</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">长袖T恤</a><a href="../GoodsList/GoodsList.html">跑步鞋</a><a href="../GoodsList/GoodsList.html">跑步裤</a><a href="../GoodsList/GoodsList.html">外套夹克</a><a href="../GoodsList/GoodsList.html">运动胸衣</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热门搜索</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>2016新品</span></a><a href="../GoodsList/GoodsList.html"><span>耐克</span></a><a href="../GoodsList/GoodsList.html">阿迪达斯</a><a href="../GoodsList/GoodsList.html">新百伦</a><a href="../GoodsList/GoodsList.html">彪马</a><a href="../GoodsList/GoodsList.html">亚瑟士</a><a href="../GoodsList/GoodsList.html">斯凯奇</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热门系列</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>Air Max</span></a><a href="../GoodsList/GoodsList.html"><span>boost</span></a><a href="../GoodsList/GoodsList.html">亚瑟士竞速</a><a href="../GoodsList/GoodsList.html">Clima</a><a href="../GoodsList/GoodsList.html">耐克登月</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">篮球</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox"  style="top: -129px;" >
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit basketball" style="text-align: center">篮球</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>2016新品</span></a><a href="../GoodsList/GoodsList.html"><span>篮球鞋</span></a><a href="../GoodsList/GoodsList.html">运动裤</a><a href="../GoodsList/GoodsList.html">比赛服</a><a href="../GoodsList/GoodsList.html">高帮</a><a href="../GoodsList/GoodsList.html">低帮</a><a href="../GoodsList/GoodsList.html">减震</a><a href="../GoodsList/GoodsList.html">NBA</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit" style="text-align: left">明星系列</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">乔丹</a><a href="../GoodsList/GoodsList.html"><span>中国年</span></a><a href="../GoodsList/GoodsList.html"><span>zoom</span></a><a href="../GoodsList/GoodsList.html"><span>air max</span></a><a href="../GoodsList/GoodsList.html">科比</a><a href="../GoodsList/GoodsList.html">詹姆斯</a><a href="../GoodsList/GoodsList.html"><span>罗斯</span></a><a href="../GoodsList/GoodsList.html">杜兰特</a><a href="../GoodsList/GoodsList.html">利拉德</a><a href="../GoodsList/GoodsList.html">韦德</a><a href="../GoodsList/GoodsList.html">安踏霸道</a><a href="../GoodsList/GoodsList.html">汤普森</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热搜品牌</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">阿迪达斯</a><a href="../GoodsList/GoodsList.html"><span>耐克</span></a><a href="../GoodsList/GoodsList.html">李宁</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">足球</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox"  style="top: -172px;">
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit football" style="text-align: center">足球</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>足球鞋</span></a><a href="../GoodsList/GoodsList.html"><span>足球服</span></a><a href="../GoodsList/GoodsList.html">护腿板</a><a href="../GoodsList/GoodsList.html">足球</a><a href="../GoodsList/GoodsList.html">速干衣</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit" style="text-align: left">系列</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>ACE</span></a><a href="../GoodsList/GoodsList.html">TIEMPO</a><a href="../GoodsList/GoodsList.html"><span>毒蜂</span></a><a href="../GoodsList/GoodsList.html">彪马SPEED</a><a href="../GoodsList/GoodsList.html">刺客</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit" style="text-align: left">鞋钉</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">FG</a><a href="../GoodsList/GoodsList.html">AG</a><a href="../GoodsList/GoodsList.html"><span>TF</span></a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热搜品牌</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">阿迪达斯</a><a href="../GoodsList/GoodsList.html">耐克</a><a href="../GoodsList/GoodsList.html">彪马</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">包包/配件</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox" style="top: -215px;">
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit bag" style="text-align: center">包包</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">腰包</a><a href="../GoodsList/GoodsList.html"><span>双肩包</span></a><a href="../GoodsList/GoodsList.html"><span>单肩包</span></a><a href="../GoodsList/GoodsList.html">手拎包</a><a href="../GoodsList/GoodsList.html">手臂包</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit" style="text-align: left">配件</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">袜子</a><a href="../GoodsList/GoodsList.html">护腿板</a><a href="../GoodsList/GoodsList.html">足球</a><a href="../GoodsList/GoodsList.html">手套</a><a href="../GoodsList/GoodsList.html">帽子</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit" style="text-align: left">热搜品牌</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>耐克</span></a><a href="../GoodsList/GoodsList.html"><span>阿迪达斯</span></a><a href="../GoodsList/GoodsList.html">匡威</a><a href="../GoodsList/GoodsList.html">NEO</a><a href="../GoodsList/GoodsList.html">彪马</a><a href="../GoodsList/GoodsList.html">李宁</a><a href="../GoodsList/GoodsList.html">锐步</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">搜索热词</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>2016新品</span></a><a href="../GoodsList/GoodsList.html">运动休闲</a><a href="../GoodsList/GoodsList.html">三条纹</a><a href="../GoodsList/GoodsList.html">法拉利</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">户外</a></span><img src="imgs/nav_jt.png">
+                    <div class="thiBox" style="top: -258px;" >
+                        <div class="thiNav">
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit outShoes" style="text-align: center">户外鞋</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>徒步鞋</span></a><a href="../GoodsList/GoodsList.html"><span>登山鞋</span></a><a href="../GoodsList/GoodsList.html"><span>溯溪鞋</span></a><a href="../GoodsList/GoodsList.html">跑步鞋</a><a href="../GoodsList/GoodsList.html">营地鞋</a></p>
+                            </div>
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit outCloth" style="text-align: center">户外服</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html">卫衣</a><a href="../GoodsList/GoodsList.html">抓绒服</a><a href="../GoodsList/GoodsList.html"><span>冲锋衣</span></a><a href="../GoodsList/GoodsList.html"><span>皮肤衣</span></a><a href="../GoodsList/GoodsList.html">风衣</a><a href="../GoodsList/GoodsList.html">冲锋裤</a><a href="../GoodsList/GoodsList.html">休闲裤</a><a href="../GoodsList/GoodsList.html">旅行裤</a><a href="../GoodsList/GoodsList.html">越野裤</a></p>
+                            </div>
+                            <div>
+                                <h3><img src="" alt=""><a href="../GoodsList/GoodsList.html" class="thi_tit outGoods" style="text-align: center">户外配件</a><a href="../GoodsList/GoodsList.html" class="thi_more">更多</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>双肩包</span></a><a href="../GoodsList/GoodsList.html"><span>单肩包</span></a><a href="../GoodsList/GoodsList.html">腰包</a></p>
+                            </div>
+                            <div>
+                                <h3><a href="../GoodsList/GoodsList.html" class="thi_tit">热搜品牌</a></h3>
+                                <p class="thi_txt"><a href="../GoodsList/GoodsList.html"><span>探路者</span></a><a href="../GoodsList/GoodsList.html">阿迪达斯</a><a href="../GoodsList/GoodsList.html">哥伦比亚</a><a href="../GoodsList/GoodsList.html">discovery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">男鞋</a></span></li>
+                <li><span class="secondNav_span"><a href="../GoodsList/GoodsList.html" class="secondNav_a">童鞋</a></span></li>
+            </ul>
+        </li>
+        <li><a href="http://localhost/MXK/index.html">首页</a></li><img src="imgs/nav_shu.png"/>
+        <li class="navMen"><a href="../GoodsList/GoodsList.html">男子运动</a>
+            <div class="nav_men">
+                <div class="navMen_l">
+                    <h4>运动鞋</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">休闲鞋</a>
+                        <a href="../GoodsList/GoodsList.html">板鞋</a>
+                        <a href="../GoodsList/GoodsList.html">跑步鞋</a>
+                        <a href="../GoodsList/GoodsList.html">帆布鞋</a>
+                        <a href="../GoodsList/GoodsList.html">拖鞋</a>
+                        <a href="../GoodsList/GoodsList.html">篮球鞋</a>
+                        <a href="../GoodsList/GoodsList.html">足球鞋</a>
+                        <a href="../GoodsList/GoodsList.html">赛车鞋</a>
+                        <a href="../GoodsList/GoodsList.html">网球鞋</a>
+                        <a href="../GoodsList/GoodsList.html">溯溪鞋</a>
+                    </p>
+                </div>
+                <div class="navMen_l">
+                    <h4>服装</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">短袖T恤</a>
+                        <a href="../GoodsList/GoodsList.html">短袖POLO</a>
+                        <a href="../GoodsList/GoodsList.html">运动长裤</a>
+                        <a href="../GoodsList/GoodsList.html">运动短裤</a>
+                        <a href="../GoodsList/GoodsList.html">休闲裤</a>
+                        <a href="../GoodsList/GoodsList.html">卫衣</a>
+                        <a href="../GoodsList/GoodsList.html">外套</a>
+                    </p>
+                </div>
+                <div class="navMen_r" >
+                    <h4>品牌推荐</h4>
+                    <ul>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/nike.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/adi.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/neo.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/nb.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/skq1.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/puma.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/kw.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/dc.png"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/vans.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/asics.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/rb.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/ln.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/anta.jpg"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li><img src="imgs/nav_shu.png"/>
+
+        <li class="navMen"><a href="../GoodsList/GoodsList.html">女子运动</a>
+            <div class="nav_men">
+                <div class="navMen_l">
+                    <h4>运动鞋</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">休闲鞋</a>
+                        <a href="../GoodsList/GoodsList.html">板鞋</a>
+                        <a href="../GoodsList/GoodsList.html">跑步鞋</a>
+                        <a href="../GoodsList/GoodsList.html">帆布鞋</a>
+                        <a href="../GoodsList/GoodsList.html">拖鞋</a>
+                        <a href="../GoodsList/GoodsList.html">网球鞋</a>
+                        <a href="../GoodsList/GoodsList.html">健步鞋</a>
+                    </p>
+                </div>
+                <div class="navMen_l">
+                    <h4>服装</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">短袖T恤</a>
+                        <a href="../GoodsList/GoodsList.html">短袖POLO</a>
+                        <a href="../GoodsList/GoodsList.html">紧身裤</a>
+                        <a href="../GoodsList/GoodsList.html">胸衣</a>
+                        <a href="../GoodsList/GoodsList.html">运动长裤</a>
+                        <a href="../GoodsList/GoodsList.html">运动短裤</a>
+                        <a href="../GoodsList/GoodsList.html">运动裙</a>
+                        <a href="../GoodsList/GoodsList.html">卫衣</a>
+                        <a href="../GoodsList/GoodsList.html">外套</a>
+                    </p>
+                </div>
+                <div class="navMen_r" >
+                    <h4>品牌推荐</h4>
+                    <ul>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/nike.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/adi.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/neo.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/syc.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/nb.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/skq1.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/puma.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/kw.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/dc.png"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/vans.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/asics.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/rb.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/ln.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/anta.jpg"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li><img src="imgs/nav_shu.png"/>
+
+        <li class="navMen"><a href="../GoodsList/GoodsList.html">儿童</a>
+            <div class="nav_men">
+                <div class="navMen_l">
+                    <h4>男童鞋</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">婴童（0-4）岁</a>
+                        <a href="../GoodsList/GoodsList.html">小童（4-10）岁</a>
+                        <a href="../GoodsList/GoodsList.html">大童（10-13）岁</a>
+                    </p>
+                    <h4  style="float: left;">女童鞋</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">婴童（0-4）岁</a>
+                        <a href="../GoodsList/GoodsList.html">小童（4-10）岁</a>
+                        <a href="../GoodsList/GoodsList.html">大童（10-13）岁</a>
+                    </p>
+                </div>
+                <div class="navMen_l">
+                    <h4>服装</h4>
+                    <p>
+                        <a href="../GoodsList/GoodsList.html">套装 裤子</a>
+                        <a href="../GoodsList/GoodsList.html">T恤</a>
+                        <a href="../GoodsList/GoodsList.html">外套</a>
+                    </p>
+                </div>
+                <div class="navMen_r" >
+                    <h4>品牌推荐</h4>
+                    <ul>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/nike.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/adi.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/syc.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/puma.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/asics.jpg"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/dis.png"/></a></li>
+                        <li><a href="../GoodsList/GoodsList.html"><img src="imgs/skq1.jpg"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li><img src="imgs/nav_shu.png"/>
+
+        <li><a href="../GoodsList/GoodsList.html">男装</a></li><img src="imgs/nav_shu.png"/>
+        <li><a href="../GoodsList/GoodsList.html">户外</a></li>
+        <li class="wxewm"><a href="../GoodsList/GoodsList.html"><img src="imgs/wx.gif"/></a>
+            <img src="imgs/wx2.png" class="wx2">
+        </li>
+        <p>
+            <span><a href="../GoodsList/GoodsList.html">上新区</a></span><img src="imgs/nav_shu2.png">
+            <span><a href="../GoodsList/GoodsList.html">即将告罄</a></span><img src="imgs/nav_shu2.png">
+            <span><a href="../GoodsList/GoodsList.html" style="color:#ffcc00">逢八必杀</a></span><img src="imgs/nav_shu2.png">
+        </p>
+    </ul>
+    <div id="nav_b"></div>
+</div>
+<!-- nav over -->
+
+<!--navigetion start-->
+<div class="navigation ">
+    <span>您当前的位置：</span><a href="#">名鞋库</a><span>»</span><a href="#">运动鞋子</a><span>»</span><a href="#">休闲鞋</a><span>»</span><a href="#">耐克</a><span>»</span><a href="#">耐克鞋子</a><span>»</span><a href="#"> 耐克 718895-008</a>
+</div>
+<!--nevigation over-->
+
+<!--godsView start-->
+<div class="goodsView">
+    <div class="goodsView_l">
+        <a href="#" class="viewB"><img src="imgs/detail1b.jpg"/></a>
+        <ul>
+            <li class="viewS viewSclick"><a href="javascript:;"><img src="imgs/detail1s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail2s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail3s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail4s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail5s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail6s.jpg" /></a></li>
+            <li class="viewS"><a href="javascript:;"><img src="imgs/detail7s.jpg" /></a></li>
+        </ul>
+        <div class="share">
+            <ul>
+                <li>分享到：</li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="goodsView_r">
+        <div class="viewHead" id="NIKE2017"><h1>耐克NIKE2017新款男鞋休闲鞋运动鞋Air 运动休闲718895-008</h1> <span>更多<a href="#">耐克</a></span></div>
+        <div class="viewPrice">
+            <ul>
+                <li>吊 牌 价 ：<span style="font-family: verdana;text-decoration: line-through">￥699.00</span></li>
+                <li>销 售 价 ：<span style="text-decoration: line-through" class="sellMoney">￥549.00</span></li>
+                <li>促 销 价 ：<span class="proMoney">￥499.00</span> &nbsp; <span class="proPrice">促销价</span>（7.1折）立省：￥200.00</li>
+                <li class="feel">好 评 度 ：<span style="color: #ccc; font-size: 14px"> ★★★★★ </span><span style="color:#2d499d;">(已有0人评论)</span></li>
+                <li style="line-height: 34px">运 &nbsp; 费：  名鞋库会员满399包邮  ( 不包括货到付款 ) </li>
+            </ul>
+        </div>
+        <div class="viewSize">
+            <div class="proMessage"><p>促销信息</p><span>满减促销：满299减10 满599减20 满999减50 &nbsp;  &nbsp; 限购3件</span></div>
+            <div class="viewSize_b">
+                <img src="imgs/cimaIcon.gif" class="cmhs">
+                <ul style="height: 35px;" class="chooseSize">
+                    <li class="firstLi">尺码：</li><li>39</li><li>40</li><li>40.5</li><li>41</li><li>42</li><li>42.5</li><li>43</li><li>44</li>
+                </ul>
+                <ul>
+                    <li class="firstLi" style="line-height: 34px">颜色：</li>
+                    <li class="detail2ss"></li>
+                </ul>
+                <ul>
+                    <li class="firstLi"  style="line-height: 34px">购买数量：</li>
+                    <li class="buyNumjian"></li>
+                    <li class="buyNum"><p  id="buyNum">1</p></li>
+                    <li class="buyNumjia"></li>
+                </ul>
+                <div class="collect"></div>
+            </div>
+        </div>
+        <div class="inputCart">
+            <p>您将购买<span class="num">1</span>件 <span class="size" style="display: none;"><span class="size_num"></span><a href="javascript:;" style="color: #666666; font-weight: normal">码</a></span> 黑+深灰</p>
+            <div class="buyNow"></div>
+            <div class="intoCart"></div>
+
+        </div>
+        <div class="customer">
+            <ul>
+                <li class="customer_tit">名鞋库客服：</li>
+                <li class="sale">销售：</li>
+                <li class="qq"><a href="#"><img src="imgs/qq.gif" style="float: left; margin-top: 6px"></a></li>
+                <li class="sale">销售：</li>
+                <li class="qq"><a href="#"><img src="imgs/qq.gif" style="float: left;margin-top: 6px"></a></li>
+            </ul>
+        </div>
+        <div class="safeguard">
+            <span>名鞋库保障：</span><img src="imgs/zheng.png" style="margin-top: 10px"><span>正品认证</span> <img src="imgs/rmb.png"/><span>自由退换</span> <img src="imgs/you.png"/> <span>全场满399免邮</span>
+        </div>
+    </div>
+</div>
+
+<!--goodsView over-->
+
+<div class="tab">
+    <a href="javascript:;" class="tabActive">商品详情</a><a href="javascript:;" >顾客评论(0)</a><a href="javascript:;">总销售量(1)</a><a href="javascript:;">购买咨询(0)</a><a href="javascript:;">购物保障</a><a href="javascript:;">放心退换货</a><a href="javascript:;">常见问题</a>
+</div>
+
+<!--detail star-->
+<div class="detail">
+    <div class="details">
+        <a href="http://localhost/MXK/index.html"><img src="imgs/detail1.jpg" /></a>
+        <div><img src="imgs/detail_xx.png" style="width: 980px;"/></div>
+        <div><img src="imgs/detail2.jpg"/></div>
+        <div><img src="imgs/detail3.jpg"/></div>
+        <div><img src="imgs/detail4.jpg"/></div>
+        <div><img src="imgs/detail5.jpg"/></div>
+        <div><img src="imgs/detail6.jpg"/></div>
+        <div><img src="imgs/detail7.jpg"/></div>
+        <div><img src="imgs/detail8.jpg"/></div>
+        <div><a href="http://localhost/MXK/index.html"><img src="imgs/detail9.jpg" /></a></div>
+        <div><a href="http://localhost/MXK/index.html"><img src="imgs/detail10.jpg" /></a></div>
+        <div class="detail_state">
+            <div><p><img src="imgs/detail11_1.jpg" /></p><div class="state">因拍照、灯光、各显示器显示效果不同等原因，您在电脑商看到的商品图片可能会与您收到的商品图片存在颜色差异，实际颜色以您收到的商品为准。请对颜色较为苛刻的顾客朋友谨慎购买，色彩问题不在名鞋库退换货范围内。</div></div>
+            <div><p><img src="imgs/detail11_2.jpg" /></p><div class="state">因品牌尺码体系，鞋型及测量方法的不同，商品实际尺码与我们提供的数据可能存在细微的差别，属正常现象，如您无法确定，请与客服核实，客服只对客户朋友提供的大致体型给出购买建议，请顾客朋友保留最终决定权，尺码不合可在七天内免责退换，邮费由顾客朋友承担。</div></div>
+            <div><p><img src="imgs/detail11_3.jpg" /></p><div class="state">鉴于提发包量巨大和款式多样，为确保每位卖家收到自己心仪的商品，发包程序需经过多方配合和检验，时间为1-2个工作日。请对发货速度要求较高的顾客朋友联系专属客服咨询物流及配送状态。</div></div>
+            <div><p><img src="imgs/detail11_4.jpg" /></p><div class="state">请选用名鞋库专用快递，即根据可达到区域，自动选择申通或EMS；如有特殊物流要求，请与客服联系并在订单留言中说明；名鞋库支持全国货到付款，即顺丰快递可达区域均可享受货到付款政策，需要提醒的是：货到付款运费由顾客朋友自行承担！</div></div>
+        </div>
+        <div><img src="imgs/detail12.jpg"/></div>
+    </div>
+    <div class="comment">
+        <div class="comment_t">
+            <p>顾客评论(0)</p>
+            <div class="comText">
+                <div class="comText_l">该商品暂无评论</div>
+                <div class="comText_r">
+                    <p>我买过此商品</p>
+                    <div id="comment">我要评论</div>
+                    <div id="lookCom">查看所有评论</div>
+                </div>
+            </div>
+        </div>
+        <div class="comment_b">
+            <p>如果您已经购买本商品有什么评价或经验,欢迎分享!</p>
+        </div>
+    </div>
+    <div class="sum">
+        <div class="sum_t">
+            <p>总销量</p>
+            <div class="sum_tit">买家</div>
+            <div class="sum_tit">购买数量</div>
+            <div class="sum_tit">购买时间</div>
+            <div class="sum_tlt">gui***</div>
+            <div class="sum_tlt">1(40、黑+深灰)</div>
+            <div class="sum_tlt">2017-01-08</div>
+        </div>
+        <p class="addUp">截至今日，累计成交 <span>1</span>笔</p>
+    </div>
+    <div class="consult">
+        <p>购买咨询 <span>(已有0条咨询)</span> <a href="#" class="consultPic"></a></p>
+        <div class="consult_b">
+            <p class="consult_b_p">如果您对本商品有什么问题,请提问咨询! </p>
+            <form action="" method="post" class="consult_form">
+                <div class="style"> <span class="consult_tit">咨询类型： </span><input type="radio" name="style" checked="checked">商品咨询<input type="radio" name="style">尺码选择<input type="radio" name="style">物流配送<input type="radio" name="style">投诉建议
+                    <p class="fastHelp">快捷帮助：<span><a href="#">退换货须知</a></span><span><a href="#">优惠券使用须知</a></span></p></div>
+                <div>
+                    <p class="consult_b_p" style="margin: 0 ;padding-left: 20px ; line-height: 41px">正品保证：&nbsp; 名鞋库全场销售商品均为品牌公司直接供货，绝无假货！</p>
+                    <p class="consult_b_p" style="margin-top: 0; margin-bottom: 10px ;padding-left: 20px; line-height: 25px; border-radius:0 0 4px 4px">商品问题：&nbsp;  每件商品的具体信息在此页面上均有显示。如鞋面材质、鞋跟高度等，您可以随时查看。</p>
+                </div>
+                <div class="title">
+                    <p class="consult_tit" style="background: none; border: none">标题：</p><span><img src="imgs/arrow_6.gif" />[咨询]耐克Nike2017新款男鞋休闲鞋运动鞋Air Max运动休闲718895-008</span>
+                </div>
+                <div class="consultText">
+                    <p class="consult_tit" style="background: none; border: none;text-align: right">咨询内容：</p> <textarea name="" id="" cols="25" rows="5" style="width:80%; margin-top: 10px;font-size:12px;line-height:1.6em;color:#999;float: left;padding-left: 5px" >请登录名鞋库后发表咨询 &#13;&#10;注册即可享受全场满399包邮（货到付款除外），若您需货到付款请查阅货到付款须知。  &#13;&#10;若您需要办理退换货等售后问题，建议您直接拨打400-116-2228转2，以便获得快速处理。</textarea>
+                </div>
+                <div class="consultSub">
+                    <div class="subinpb">提交咨询</div>
+                    <a href="#" class="consultSub_tit">[登录名鞋库]</a>
+                    <a href="#" class="consultSub_tit">[免费注册]</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="protect" style="display: none">
+        <div><img src="imgs/protect.jpg" /></div>
+    </div>
+    <div class="ok" style="display: none">
+        <div><img src="imgs/ok.jpg" /></div>
+    </div>
+    <div class="problem" style="display: none">
+        <div><img src="imgs/problem.jpg" /></div>
+        <div style="color:#ccc;padding-top:5px; text-align: left;  line-height: 1.5em">如果以上的常见问题仍然无法解决您对耐克Nike2017新款男鞋休闲鞋运动鞋Air Max运动休闲718895-008的疑问，您可以通过询问名鞋库客服人员，或登录s.cn名鞋库网站，直接提问，来解决关于耐克Nike2017新款男鞋休闲鞋运动鞋Air Max运动休闲718895-008的问题。</div>
+    </div>
+</div>
+<!--detail over-->
+
+<!--relateCom start-->
+<div class="relateCom">
+    <p>相关推荐</p>
+    <div>
+        <a title="耐克沙滩鞋 ">耐克沙滩鞋</a>
+        <a title="耐克凉鞋">耐克凉鞋</a>
+        <a title="耐克拖鞋 ">耐克拖鞋</a>
+        <a title="耐克足球鞋 ">耐克足球鞋</a>
+        <a title="耐克训练鞋 ">耐克训练鞋</a>
+        <a title="耐克篮球鞋 ">耐克篮球鞋</a>
+        <a title="耐克休闲鞋 ">耐克休闲鞋</a>
+        <a title="耐克板鞋" >耐克板鞋</a>
+        <a title="耐克跑步鞋 ">耐克跑步鞋</a>
+        <a title="耐克情侣鞋 ">耐克情侣鞋</a>
+        <a title="耐克女鞋" >耐克女鞋</a>
+        <a title="耐克男鞋" >耐克男鞋</a>
+    </div>
+</div>
+<!--relateCom over-->
+
+
+<!-- logo_b start -->
+<div class="logo_b layout">
+    <ul>
+        <li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li>
+        <li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li>
+        <li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li>
+    </ul>
+</div>
+<!--logo_b over  -->
+
+<!-- goods start -->
+<div class="goods layout">
+    <div class="goodText"><p>商品分类</p></div>
+    <dl>
+        <dt>
+        <p>运动鞋</p><img src="imgs/goods1.jpg">
+        </dt>
+        <dd><a href="#">运动鞋</a><a href="#">户外鞋</a><a href="#">跑步鞋</a><a href="#">篮球鞋</a><a href="#">足球鞋</a><a href="#">训练鞋</a>
+            <a href="#">徒步鞋</a><a href="#">登山鞋</a><a href="#">健步鞋</a><a href="#">网球鞋</a><a href="#">赛车鞋</a><a href="#">溯溪鞋</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+        <p>运动休闲鞋</p><img src="imgs/goods2.jpg">
+        </dt>
+        <dd><a href="#">帆布鞋</a><a href="#">休闲鞋</a><a href="#">豆豆鞋</a><a href="#">拖鞋</a><a href="#">靴子</a><a href="#">板鞋</a>
+            <a href="#">男鞋</a><a href="#">女鞋</a><a href="#">单鞋</a><a href="#">皮鞋</a><a href="#">沙滩鞋</a><a href="#">儿童鞋</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+        <p>服装</p><img src="imgs/goods3.jpg">
+        </dt>
+        <dd><a href="#">运动服</a><a href="#">男运动服</a><a href="#">女运动服</a><a href="#">运动裤</a><a href="#">卫衣</a><a href="#">夹克</a>
+            <a href="#">T恤</a><a href="#">外套</a><a href="#">冲锋衣</a><a href="#">棉服</a><a href="#">羽绒服</a><a href="#">休闲裤</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+        <p>包包/配件</p><img src="imgs/goods4.jpg">
+        </dt>
+        <dd><a href="#">运动包</a><a href="#">户外包</a><a href="#">双肩包</a><a href="#">单肩包</a><a href="#">腰包</a><a href="#">手拎包</a>
+            <a href="#">男包</a><a href="#">女包</a><a href="#">帽子</a><a href="#">袜子</a><a href="#">足球</a><a href="#">篮球</a>
+        </dd>
+    </dl>
+</div>
+<!--goods over  -->
+
+<div class="layout"><a href="http://localhost/MXK/index.html"><img src="imgs/return.jpg"/></a></div>
+
+<!--bottom start -->
+<div class="bottom">
+    <div class="bottom_cont layout">
+        <div class="bottom_left"><img src="imgs/bottom_left.png"></div>
+        <div class="bottom_right">
+            <ul>
+                <li>
+                    <a href="#"><img src="imgs/bottom_right11.png"/></a>
+                    <h4>支付方式</h4>
+                    <a href="#">在线支付</a><a href="#">货到付款</a><a href="#">发票说明</a>
+                </li>
+                <li><a href="#"><img src="imgs/bottom_right22.png"/></a>
+                    <h4>售后服务保障</h4>
+                    <a href="#">退换货说明</a><a href="#">服务承诺</a>
+                </li>
+                <li>
+                    <a href="#"><img src="imgs/bottom_right33.png"/></a>
+                    <h4>物流配送</h4>
+                    <a href="#">合作快递</a><a href="#">运费说明</a><a href="#">配送时间</a>
+                </li>
+                <li style="width: 156px">
+                    <a href="#"><img src="imgs/bottom_right44.png"/></a>
+                    <h4>会员服务</h4>
+                    <a href="#">级别和特权</a><a href="#">积分政策</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- bottom over -->
+
+<!-- footer start -->
+<div class="footer">
+    <div class="footText">
+        <p>
+            <span><a href="#">关于名鞋库&nbsp;|</a></span><span><a href="#">&nbsp;名鞋库资讯&nbsp;|</a></span><span><a href="#">&nbsp;联系名鞋库&nbsp;|</a></span><span><a href="#">&nbsp;人才招聘&nbsp;|</a></span><span><a href="#">&nbsp;免责条款&nbsp;|</a></span><span><a href="#">&nbsp;法律声明&nbsp;|</a></span><span><a href="#">&nbsp;意见反馈&nbsp;|</a></span><span><a href="#">&nbsp;全部分类&nbsp;|</a></span><span><a href="#">&nbsp;友情链接&nbsp;|</a></span><span><a href="#">&nbsp;鞋码对照表&nbsp;|</a></span><span><a href="#">&nbsp;问答资讯标签主题&nbsp;|</a></span><span><a href="#">&nbsp;鞋子品牌大全 &nbsp;|</a></span><span><a href="#">&nbsp;商品大全</a></span>
+        </p>
+        <p>
+            Copyright © 2008-2014 <span>s.cn</span><a href="#">名鞋库</a>All Rights Reserved.&nbsp;<a href="">闽ICP备08106896号</a>&nbsp;经营许可证闽B2-20110061&nbsp;<img src="imgs/ga.png"/>闽公网安备<a href="#">35020602000166号</a>
+        </p>
+    </div>
+    <div class="footPic"><a href="#"><img src="imgs/footer_pic1.png"></a><a href="#"><img src="imgs/footer_pic2.png"></a><a
+            href="#"><img src="imgs/footer_pic3.png"></a><a href="#"><img src="imgs/footer_pic4.png"></a><a href="#"><img src="imgs/footer_pic5.png"></a></div>
+</div>
+<!-- footer over -->
+
+</body>
+</html>

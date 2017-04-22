@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/Catrs_css.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/Carts_js.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="../common/js/common_js.js"></script>
+</head>
+<body>
+
+<!--header start-->
+<header>
+    <div class="head">
+        <div id="hasLogin">
+            欢迎您，
+            <span id="username">111</span>
+            <a id="logout" href="javascript:;">[退出]</a>
+        </div>
+        <div class="head_r">
+            <div><a href="javascript:;">我的订单</a></div>
+            <div class="hoverP"><a href="javascript:;">我的名鞋库</a><span class="san"></span>
+                <div class="myShoesH">
+                    <ul>
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">我的积分</a></li>
+                        <li><a href="#">优惠券</a></li>
+                        <li><a href="#">商品收藏</a></li>
+                        <li><a href="#">收获地址</a></li>
+                        <li><a href="#">密码管理</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hoverP"><a href="javascript:;">帮助中心</a><span class="san"></span>
+                <span class="afterSale">售后中心</span>
+            </div>
+        </div>
+
+    </div>
+</header>
+<!--header over-->
+
+<!--logo start-->
+<div class="logo">
+    <img src="imgs/logo.png"  class="logoPic"/>
+    <img src="imgs/logo_r.png" class="logoPic_r"/>
+</div>
+<!--logo over-->
+
+<!--nav start-->
+<div class="nav">
+    <img src="imgs/cartnav.jpg">
+</div>
+<!--nav over-->
+
+<!--fixed start-->
+<div class="fixed">
+    <img src="imgs/cart_fixd.png">
+</div>
+<!--fixed over-->
+
+<!--myCarts start-->
+<div class="myCarts">
+    <p>我的购物车</p>
+    <div class="goods">
+        <header>
+            <ul>
+                <li>商品信息</li>
+                <li>赠送积分</li>
+                <li>销售价格</li>
+                <li>数量</li>
+                <li>折扣/优惠</li>
+                <li>小计</li>
+                <li>操作</li>
+            </ul>
+        </header>
+        <div class="information">
+            <!--<ul class="viewHead" id="NIKE2017">-->
+                <!--<li><img src="imgs/goods_s.jpg" /></li>-->
+                <!--<li> 耐克Nike2017新款男鞋休闲鞋运动鞋Air Max运动休闲718895-008<span>( 尺码:42.5,颜色:黑+深灰 )</span></li>-->
+                <!--<li>0</li>-->
+                <!--<li>￥549.00</li>-->
+                <!--<li>-->
+                    <!--<div class="sub"></div>-->
+                    <!--<div class="number">1</div>-->
+                    <!--<div class="plus"></div>-->
+                <!--</li>-->
+                <!--<li>-￥50.00</li>-->
+                <!--<li>￥499.00 </li>-->
+                <!--<li><p class="collect">收藏</p><p class="delete">删除</p></li>-->
+            <!--</ul>-->
+        </div>
+        <div class="bigPic" style="position: absolute;display:none; border: 1px #333 solid; width: 155px; height: 155px;"><img src="imgs/goods_s.jpg" style="width: 153px; height: 153px;" /></div>
+    </div>
+    <div class="sum">
+        <div class="sum_num">商品数量：<span>1</span> 件 &nbsp; <a href="javascript:;">享受的优惠：</a>&nbsp;促销价 满减促销：满299减10 满599减20 满999减50</div>
+        <div class="sum_money">商品总金额：<span>￥489.00</span></div>
+    </div>
+    <div class="account">
+        <p><span>提示：</span>加入购物车的商品无法为您保证库存，请及时下单支付。</p>
+        <input type="button" value="下单结算" id="pay">
+        <div class="continue"><span></span>继续购物</div>
+    </div>
+</div>
+<!--myCarts over-->
+
+<!--emptyVCarts start-->
+<div class="emptyCarts">
+    <img src="imgs/empytCart.png"/>
+    <p>您还没有挑选商品，<a href="../index.html">返回首页</a>。</p>
+</div>
+<!--emptyCarts over-->
+
+<!--footer start-->
+<footer>
+    <p>
+        <a href="javascript:;" > 关于名鞋库 </a>
+        |
+        <a href="javascript:;" > 联系名鞋库 </a>
+        |
+        <a href="javascript:;" > 人才招聘 </a>
+        |
+        <a href="javascript:;" > 免责条款 </a>
+        |
+        <a href="javascript:;"> 法律声明 </a>
+        |
+        <a href="javascript:;"> 客服中心 </a>
+        |
+        <a href="javascript:;"> 全部分类 </a>
+        |
+        <a href="javascript:;"> 友情链接 </a>
+        |
+        <a href="javascript:;"> 鞋子尺码对照表 </a>
+        |
+        <a href="javascript:;"> 问答中心 </a>
+    </p>
+    <p>
+        Copyright © 2008-2014 <span>s.cn</span> All Rights Reserved. <a  class="icp" href="javascript:;">闽ICP备08106896号</a>  经营许可证闽B2-20110061
+    </p>
+    <div><img src="imgs/fwd.png" class="fwd"/><img src="imgs/baxx.png" class="baxx"/></div>
+</footer>
+<!--footer over-->
+
+</body>
+</html>
